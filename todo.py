@@ -8,9 +8,9 @@ def show_tasks():
         for i, task in enumerate(tasks ,1):
             print(f"{i}.{task}")
 
-def add_tasks(task):
-    tasks.append(task)
-    print(f"Added:{task}")
+def add_tasks(task, due_date=None):
+    tasks.append({"task" : task, "{due_date" : due_date})
+    print(f"Added:{task} (Due: {due_date})")
 
 def remove_tasks(index):
     if 0 < index <= len(tasks):
